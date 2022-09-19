@@ -26,7 +26,6 @@ public class Card implements Comparable<Card> {
   @Override
   public int hashCode() {
     return Objects.hash(rank, suit); // FIXME: 9/16/2022 Move this to initialization.
-
   }
 
   @Override

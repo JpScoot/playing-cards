@@ -25,7 +25,7 @@ public enum Rank {
   }
 
   //accessor method
-  public String symbol(){
+  public String symbol() {
     return symbol;
   }
 
