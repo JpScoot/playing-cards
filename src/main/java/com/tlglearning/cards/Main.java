@@ -10,8 +10,17 @@ public class Main {
 
   public static void main(String[] args) {
 
-     Comparator<Card> comparator = new Comparator<>() {
 
+    Deck deck = new Deck(); // create an instance of Deck
+    System.out.println(deck); // print deck.
+
+    Random rng = new SecureRandom();  // create an acceptable source of randomness.
+    deck.Shuffle(rng); //  shuffle the deck, using the created source of randomness.
+    System.out.println(deck); // print the string representation of the deck after shuffling.
+
+    deck.sort();
+    System.out.println(deck);
+    deck.sort(new Comparator<>() {
       @Override
       public int compare(Card card1, Card card2) {
         int comparison = card1.suit().color().compareTo(card2.suit().color());
@@ -23,21 +32,9 @@ public class Main {
         }
         return comparison;
       }
-    };
-
-    Deck deck = new Deck(); // create an instance of Deck
-    System.out.println(deck); // print deck.
-
-    Random rng = new SecureRandom();  // create an acceptable source of randomness.
-    deck.Shuffle(rng); //  shuffle the deck, using the created source of randomness.
-    System.out.println(deck); // print the string representation of the deck after shuffling.
-
-    deck.sort();
-    System.out.println(deck);
-    deck.sort(comparator);
+    });
     System.out.println(deck);
   }
-
 
 }
 
