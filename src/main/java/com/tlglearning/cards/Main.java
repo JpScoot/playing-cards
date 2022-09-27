@@ -23,6 +23,7 @@ public class Main {
 
 }
 
+//package private
  class ColorFirst implements Comparator<Card> {
 
   @Override
