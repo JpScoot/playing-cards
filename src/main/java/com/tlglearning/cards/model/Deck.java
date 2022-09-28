@@ -26,11 +26,11 @@ public class Deck implements Iterable<Card> {
     return Collections.unmodifiableList(cards).iterator();
   }
 
-  public void Shuffle(Random rng) {
+  public void shuffle(Random rng) {
     Collections.shuffle(cards, rng);
   }
 
-  public void Shuffle() {
+  public void shuffle() {
     Collections.shuffle(cards);
   }
 
